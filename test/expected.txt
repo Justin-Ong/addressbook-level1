@@ -55,6 +55,10 @@
 || 	Parameters: NAME p/PHONE_NUMBER e/EMAIL
 || 	Example: add John Doe p/98765432 e/johnd@gmail.com
 || 
+|| edit: Edits a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX NAME p/PHONE_NUMBER e/EMAIL
+|| 	Example: edit 1 John Doe p/98765432 e/johnd@gmail.com
+|| 
 || find: Finds all persons whose names contain any of the specified keywords (case-sensitive) and displays them as a list with index numbers.
 || 	Parameters: KEYWORD [MORE_KEYWORDS]
 || 	Example: find alice bob charlie
@@ -265,6 +269,60 @@
 || Enter command: || [Command entered:  list]
 || 	1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
 || 	2. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 
+|| 2 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  edit]
+|| Invalid command format: edit 
+|| edit: Edits a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX NAME p/PHONE_NUMBER e/EMAIL
+|| 	Example: edit 1 John Doe p/98765432 e/johnd@gmail.com
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit wrong args]
+|| Invalid command format: edit 
+|| edit: Edits a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX NAME p/PHONE_NUMBER e/EMAIL
+|| 	Example: edit 1 John Doe p/98765432 e/johnd@gmail.com
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit 0]
+|| Invalid command format: edit 
+|| edit: Edits a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX NAME p/PHONE_NUMBER e/EMAIL
+|| 	Example: edit 1 John Doe p/98765432 e/johnd@gmail.com
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit 1]
+|| Invalid command format: edit 
+|| edit: Edits a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX NAME p/PHONE_NUMBER e/EMAIL
+|| 	Example: edit 1 John Doe p/98765432 e/johnd@gmail.com
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit 1 Valid Name p/12345 valid@email.butNoPrefix]
+|| Invalid command format: edit 
+|| edit: Edits a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX NAME p/PHONE_NUMBER e/EMAIL
+|| 	Example: edit 1 John Doe p/98765432 e/johnd@gmail.com
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit 1 12345 e/valid@email.butPhonePrefixMissing]
+|| Invalid command format: edit 
+|| edit: Edits a person identified by the index number used in the last find/list call.
+|| 	Parameters: INDEX NAME p/PHONE_NUMBER e/EMAIL
+|| 	Example: edit 1 John Doe p/98765432 e/johnd@gmail.com
+|| 
+|| ===================================================
+|| Enter command: || [Command entered:  edit 3 Alex p/99999 e/a@b.c]
+|| The person index provided is invalid
+|| ===================================================
+|| Enter command: || [Command entered:  edit 1 Alex p/99999 e/a@b.c]
+|| Edited Person: Alex  Phone Number: 99999  Email: a@b.c
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 	2. Alex  Phone Number: 99999  Email: a@b.c
 || 
 || 2 persons found!
 || ===================================================

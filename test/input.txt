@@ -14,7 +14,7 @@
   list
 
 ##########################################################
-# test add person command, setup state for futuer tests
+# test add person command, setup state for future tests
 ##########################################################
 
   # should catch invalid args format
@@ -90,7 +90,28 @@
   # listing indexes get updated on next request
   delete 1
   list
+  
+##########################################################
+# test edit command
+##########################################################
 
+# last active view: [1] betsy [2] dickson
+
+  # should catch invalid args and formatting
+  edit
+  edit wrong args
+  edit 0
+  edit 1
+  edit 1 Valid Name p/12345 valid@email.butNoPrefix
+  edit 1 12345 e/valid@email.butPhonePrefixMissing
+  
+  #should catch invalid index
+  edit 3 Alex p/99999 e/a@b.c
+
+  # edits correct person
+  edit 1 Alex p/99999 e/a@b.c
+  list
+  
 ##########################################################
 # test clear command
 ##########################################################
