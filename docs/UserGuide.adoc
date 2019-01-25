@@ -56,6 +56,28 @@ Examples:
 * `add John Doe p/98765432 e/johnd@gmail.com`
 * `add Betsy Crowe e/bencrowe@gmail.com p/1234567`
 
+
+=== Editing a person: `edit`
+
+Edits an existing person in the address book. +
+Format: `edit INDEX NAME p/PHONE_NUMBER e/EMAIL`
+
+[NOTE]
+====
+Words in `UPPER_CASE` are the parameters. +
+Phone number and email can be in any order but the name must come first.
+====
+
+Examples:
+
+* `list` +
+`edit 1 Ryan p/98765432 e/abc@xyz.com` +
+Edits the 1st person in the address book to match the new input.
+
+* `find Betsy` +
+`edit 1 Ryan p/98765432 e/abc@xyz.com` +
+Edits the 1st person in the results of the `find` command.
+
 === Listing all persons: `list`
 
 Shows a list of persons, as an indexed list, in the order they were added to the address book,
